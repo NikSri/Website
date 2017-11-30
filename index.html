@@ -2,4 +2,18 @@
 <h1 style = "color: MediumSeaGreen; background-color: White; font-size: 300%; text-align: center;">OMG WE MADE A WEBSITE!!!!!</h1>
 <p style = "color:DodgerBlue; background-color: White; font-size: 200%; text-align: center;">Here's the start of the webpage</p>
 <button type="button" onclick="alert('ooOOOo look what i can do!')">Click Me!</button>
+ var static_map_url = GMaps.staticMapURL({
+    lat:     42.2808,
+    lng:     -83.7430,
+    markers: [{
+        lat: 42.2808,
+        lng: -83.7430,
+    }],
+    zoom:    15,
+    size:    [507, 396]
+});
+static_map_url += '&key=' + AIzaSyBlTUmh8diT6wtCBBHXN2Ek46zyrwdBis4;
+$('<img/>').addClass('img-responsive')
+           .attr('src', static_map_url)
+           .appendTo('body');
 </body>
