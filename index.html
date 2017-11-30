@@ -1,19 +1,32 @@
+<meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
 <body style = "background-image: url('https://images3.privateschoolreview.com/photo/780x600/14000/13987/Greenhills-School-eJIcIQ.jpg')">
 <h1 style = "color: MediumSeaGreen; background-color: White; font-size: 300%; text-align: center;">OMG WE MADE A WEBSITE!!!!!</h1>
 <p style = "color:DodgerBlue; background-color: White; font-size: 200%; text-align: center;">Here's the start of the webpage</p>
 <button type="button" onclick="alert('ooOOOo look what i can do!')">Click Me!</button>
- var static_map_url = GMaps.staticMapURL({
-    lat:     42.2808,
-    lng:     -83.7430,
-    markers: [{
-        lat: 42.2808,
-        lng: -83.7430,
-    }],
-    zoom:    15,
-    size:    [507, 396]
-});
-static_map_url += '&key=' + AIzaSyBlTUmh8diT6wtCBBHXN2Ek46zyrwdBis4;
-$('<img/>').addClass('img-responsive')
-           .attr('src', static_map_url)
-           .appendTo('body');
+ <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlTUmh8diT6wtCBBHXN2Ek46zyrwdBis4&callback=initMap"
+    async defer></script>
 </body>
