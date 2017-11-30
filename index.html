@@ -15,28 +15,29 @@
       }
     </style>
 <body>
-<h1 style = "color: MediumSeaGreen; background-color: Black; font-size: 400%; text-align: center; font-family: georgia;">Gryph-On-Wheels</h1>
-<p style = "color:DodgerBlue; background-color: White; font-size: 200%; text-align: center; font-family: georgia;">Welcome to the Greenhills School carpool page!</p>
-<button type="button" onclick="initMap()" > Map</button>
+<h1 style = "color: MediumSeaGreen; background-color: White; font-size: 300%; text-align: center;">OMG WE MADE A WEBSITE!!!!!</h1>
+<p style = "color:DodgerBlue; background-color: White; font-size: 200%; text-align: center;">Here's the start of the webpage</p>
+<button type="button" onclick="initMap()">Map</button>
 
 <div id="map"></div>
     <script>
-
       function initMap() {
         var myLatLng = {lat: 42.285438, lng: -83.679639};
-
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 10,
           center: myLatLng
         });
-
         var marker = new google.maps.Marker({
           position: myLatLng,
           map: map,
           title: 'Greenhills School'
         });
       }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlTUmh8diT6wtCBBHXN2Ek46zyrwdBis4&callback=myFunction">
+    <button type="button" onclick="initMap()">Map</button>
     
-     
+}
     </script>
 </body>
