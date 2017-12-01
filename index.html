@@ -1,13 +1,12 @@
 <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
+      
       #map {
         height: 700px;
         width: 1000px;
       }
-      /* Optional: Makes the sample page fill the window. */
+      
       html, body {
         height: 100%;
         margin: 0;
@@ -15,12 +14,16 @@
       }
     </style>
 <body bgcolor="#eeeeee">
+    <!--This is the part that indicates the style of the first heading-->
 <h1 style = "color: White; background-color:MediumSeaGreen; font-size: 400%; text-align: center; font-family: georgia;">Gryph-On-Wheels</h1>
+    <!--This indicates the style of the second heading-->
 <h2 style = "color:black; background-color: #ffffff; font-size: 200%; text-align: center; font-family: georgia;">Welcome to the Greenhills carpool website!</h2>
+    <!--This sets the style of the map button and sayas that the map will appear when the button is clicked-->
 <button type="button" onclick="initMap()" style="color: white; background-color: MediumSeaGreen; font-family: georgia; font-size:200%;">Map</button>
-
+<!--This is the function that calls google maps and gives you the map-->
 <div id="map"></div>
     <script>
+       
       function initMap() {
         var myLatLng = {lat: 42.285438, lng: -83.679639};
         var map = new google.maps.Map(document.getElementById('map'), {
