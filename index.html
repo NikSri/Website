@@ -23,7 +23,43 @@
 <button type="button" onclick="initMap()" style="color: white; background-color: MediumSeaGreen; font-family: georgia; font-size:200%;">Map</button>
 <!--This is the function that calls google maps and gives you the map-->
 <button type="button" onclick="alert('Sorry the calendar is not working right now')" style="color:white; background-color: MediumSeaGreen; font-family: georgia; font-size:200%;">Calendar</button>
-<button type="button" onclick="alert('This is where the about page will be')" style="color: white; background-color: MediumSeaGreen; font-family: georgia; font-size:200%;">About</button>   
+<head>
+<style>
+#myDIV {
+    width: 100%;
+    padding: 75px 0;
+    text-align: center;
+    background-color: white;
+    margin-top: 100px;
+}
+</style>
+</head>
+
+
+
+
+
+<button type="button" onclick= "myFunction()" style="color: white; background-color: MediumSeaGreen; font-family: georgia; font-size:200%;">About</button>   
+
+<div id="myDIV">
+Made by Sydney Cha, Nik Srinivasan, Alena Song, and Claire Miech, wth the help of the wonderful coding club led by Mr.Kahn and Ms.Flohr!
+</div>
+
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
+   
 <div id="map"></div>
     <script>
       
